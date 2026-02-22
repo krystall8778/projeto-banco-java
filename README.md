@@ -1,5 +1,9 @@
 # Projeto Banco em Java
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![JUnit](https://img.shields.io/badge/JUnit-Tests-green)
+
 Sistema bancário orientado a objetos desenvolvido em Java com foco
 na aplicação prática de conceitos fundamentais de POO, como
 abstração, herança, polimorfismo e uso de interfaces.
@@ -33,6 +37,15 @@ Este projeto foi desenvolvido com o propósito de consolidar conhecimentos em:
 - Aplicação de rendimento (Conta Poupança)
 - Bloqueio de operações em contas inativas
 - Testes automatizados validando regras de negócio
+
+---
+
+## Qualidade de Software e Testes
+
+Neste projeto, dei uma atenção especial à confiabilidade das operações. Foi meu primeiro contato prático com **testes unitários** e o framework **JUnit 5**.
+
+- **O que foi testado:** Validei cenários críticos como saques acima do limite, transferências entre contas inativas e cálculos de rendimento.
+- **Aprendizado:** Entendi como os testes ajudam a evitar que novas funcionalidades quebrem o que já estava funcionando.
 
 ---
 
@@ -124,6 +137,16 @@ mvn exec:java -Dexec.mainClass="ProjetoBanco.Main"
 ```bash
 mvn test
 ```
+
+---
+
+##  Próximos Passos (Melhorias Futuras)
+
+O projeto está em constante evolução. Algumas melhorias planejadas são:
+- [ ] **Precisão Financeira:** Substituir o tipo `double` por `BigDecimal` para evitar problemas de arredondamento.
+- [ ] **Persistência:** Implementar um banco de dados (MySQL ou PostgreSQL) para salvar os dados permanentemente.
+- [ ] **API REST:** Transformar o projeto em um serviço web usando Spring Boot.
+- [ ] **Interface Gráfica:** Criar uma interface web ou desktop para facilitar o uso.
 
 ---
 
