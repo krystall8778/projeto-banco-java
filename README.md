@@ -62,8 +62,8 @@ src/
  │       ├── AplicarRendimento.java
  │       ├── CobrancaMensal.java
  │       └── OperacoesBancarias.java
+ |
  └── test/java/ProjetoBanco
-     ├── ContaTest.java
      ├── ContaCorrenteTest.java
      └── ContaPoupancaTest.java
 ```
