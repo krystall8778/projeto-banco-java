@@ -6,7 +6,6 @@ public class ContaCorrente extends Conta implements CobrancaMensal {
 
     private double taxaMensal;
     private double limiteEspecial;
-    //private boolean emusochequeespecial;
 
     public ContaCorrente(String numeroConta, String dono, double limiteEspecial, double taxaMensal){
         super(numeroConta, dono);

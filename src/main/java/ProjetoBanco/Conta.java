@@ -70,10 +70,6 @@ public abstract class Conta implements OperacoesBancarias {
 
     }
 
-    //public void setNumeroConta(String numeroConta) {
-    //this.numeroconta = numeroConta;
-    //}
-
     public String getDono() {
         return dono;
     }
