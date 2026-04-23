@@ -62,19 +62,6 @@ public class Cliente {
         return contas;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
