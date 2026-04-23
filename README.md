@@ -40,6 +40,11 @@ Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em:
 - Histórico de operações
 - Validação de regras de negócio
 - Bloqueio de operações em contas inativas
+- Sistema de processamento em lote com controle de falhas:
+- Execução de transações via fila (Queue)
+- Tratamento de exceções
+- Rollback automático através do método `desfazer()`
+- Controle de status da transação (CONCLUÍDA / FALHOU)
 
 ---
 
@@ -112,7 +117,7 @@ Utilizada para:
 
 ---
 
-##   Testes
+##  Testes
 
 - Testes unitários com **JUnit 5**
 - Validação de regras de negócio
@@ -121,7 +126,7 @@ Utilizada para:
 
 ---
 
-## Precisão Financeira
+##  Precisão Financeira
 
 - Uso de `BigDecimal` para cálculos monetários
 - Evita erros de arredondamento comuns em `double`
