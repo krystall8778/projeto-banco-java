@@ -34,16 +34,4 @@ public class MenuNavegacao {
         historicosMenus.pop();
         String menuAnterior = historicosMenus.peek();
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
