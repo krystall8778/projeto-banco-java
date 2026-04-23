@@ -1,0 +1,59 @@
+@startuml
+
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+
+ left to right direction
+
+ package "interfaces" {
+   interface AplicarRendimento
+   interface CobrancaMensal
+   interface OperacoesBancarias
+
+ }
+
+ package "model" {
+   class Cliente
+   abstract class Conta
+   class ContaCorrente
+   class ContaPoupanca
+   class RegistroTransacao
+ }
+
+ Conta <|-- ContaCorrente
+ Conta <|-- ContaPoupanca
+
+ Conta ..|> OperacoesBancarias
+ ContaCorrente ..|> CobrancaMensal
+ ContaPoupanca ..|> AplicarRendimento
+
+ Cliente "1" -- "1..*" Conta
+ Conta *-- RegistroTransacao
+
+
+
+
+ @enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

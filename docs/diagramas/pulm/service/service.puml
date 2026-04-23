@@ -1,0 +1,25 @@
+@startuml
+
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+left to right direction
+
+package "model" {
+class Cliente
+class RegistroTransacao
+enum TipoTransacao <<enum>>
+}
+
+package "service" {
+   class Banco
+   class GerenciamentoTransacao
+   class TransacaoFactory
+ }
+
+ Banco --> Cliente
+ GerenciamentoTransacao --> RegistroTransacao
+
+ TransacaoFactory ..> RegistroTransacao : <<creates>>
+ TransacaoFactory ..> TipoTransacao : <<uses>>
+
+@enduml
