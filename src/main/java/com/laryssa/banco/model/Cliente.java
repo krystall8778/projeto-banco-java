@@ -3,16 +3,17 @@ package com.laryssa.banco.model;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Cliente {
-    private final int id;
+    private final UUID id;
     private String nome;
     private final String cpf;
     private String senha;
     private List<Conta> contas = new ArrayList<>( );
 
-    public Cliente(int id, String nome, String cpf) {
-        this.id = id;
+    public Cliente(String nome, String cpf) {
+        this.id = UUID.randomUUID();
         this.nome = nome;
         this.cpf = cpf;
     }
@@ -34,7 +35,7 @@ public class Cliente {
 
     }
 
-    public int getId() {
+        public UUID getId() {
         return id;
     }
 
