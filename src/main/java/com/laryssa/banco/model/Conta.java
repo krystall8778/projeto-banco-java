@@ -25,7 +25,7 @@ public abstract class Conta implements OperacoesBancarias {
     }
 
     public void abrirConta() {
-        setAtiva(true);
+        this.ativa = true;
     }
 
     public void fecharConta() {
@@ -128,9 +128,6 @@ public abstract class Conta implements OperacoesBancarias {
         return ativa;
     }
 
-    private void setAtiva(boolean ativa) {
-        this.ativa = ativa;
-    }
 }
 
 

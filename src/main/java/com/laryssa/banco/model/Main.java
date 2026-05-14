@@ -8,20 +8,17 @@ public class Main {
 
         System.out.println("=== SIMULAÇÃO BANCÁRIA ===");
 
-        // Configurações do sistema
+
         BigDecimal limiteEspecial = new BigDecimal("1000.00");
         BigDecimal taxaMensal = new BigDecimal("25.00");
         BigDecimal taxaRendimento = new BigDecimal("5.00");
 
-        // Criando contas
         ContaCorrente contaCorrente = criarContaCorrente();
         ContaPoupanca contaPoupanca = criarContaPoupanca();
 
-        // Operações
         realizarOperacoesContaCorrente(contaCorrente);
         realizarOperacoesContaPoupanca(contaPoupanca);
 
-        // Resultado final
         exibirResultados(contaCorrente, contaPoupanca);
     }
 

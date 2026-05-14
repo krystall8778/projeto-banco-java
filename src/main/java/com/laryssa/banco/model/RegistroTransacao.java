@@ -11,9 +11,9 @@ import java.util.Locale;
 import java.util.UUID;
 
 public class RegistroTransacao {
-    private LocalDateTime dataHora;
-    private TipoTransacao tipo;
-    private BigDecimal valor;
+    private final LocalDateTime dataHora;
+    private final TipoTransacao tipo;
+    private final BigDecimal valor;
     private StatusTransacao status;
     private UUID id;
     private Conta contaOrigem;
@@ -31,7 +31,6 @@ public class RegistroTransacao {
 
 
    }
-
 
     public void executar(){
         validarTransacao();
@@ -92,7 +91,7 @@ public class RegistroTransacao {
 
     public String processarRecibo(){
        if(id != null){
-           String conteudo = gerarRecibo();;
+           String conteudo = gerarRecibo();
            this.status = StatusTransacao.CONCLUIDA;
            return conteudo;
        }
@@ -159,6 +158,6 @@ public class RegistroTransacao {
     }
 
     public void setStatus(StatusTransacao status) {
-        this.status = status;
-    }
+       this.status = status;
+   }
 }
