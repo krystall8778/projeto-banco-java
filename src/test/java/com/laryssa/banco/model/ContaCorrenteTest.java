@@ -13,10 +13,7 @@ public class ContaCorrenteTest {
 
     @BeforeEach
     public void setUp() {
-        conta = new ContaCorrente("123", "laryssa", BigDecimal.valueOf(500), BigDecimal.valueOf(5));
-
-        conta.abrirConta();
-
+        conta = new ContaCorrente("laryssa", BigDecimal.valueOf(500), BigDecimal.valueOf(5));
         conta.depositar(BigDecimal.valueOf(200));
     }
 

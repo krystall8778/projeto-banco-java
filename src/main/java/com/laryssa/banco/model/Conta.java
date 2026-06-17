@@ -3,6 +3,7 @@ package com.laryssa.banco.model;
 import com.laryssa.banco.interfaces.OperacoesBancarias;
 import com.laryssa.banco.model.enums.TipoTransacao;
 import com.laryssa.banco.service.TransacaoFactory;
+import com.laryssa.banco.util.NumeroContaGenerator;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -17,14 +18,10 @@ public abstract class Conta implements OperacoesBancarias {
     private boolean ativa;
     protected List <RegistroTransacao> historico = new ArrayList<>();
 
-    public Conta(String numeroConta, String dono) {
-        this.numeroconta = numeroConta;
+    public Conta(String dono) {
+        this.numeroconta = NumeroContaGenerator.gerar();
         this.dono = dono;
         this.saldo = BigDecimal.ZERO;
-        this.ativa = false;
-    }
-
-    public void abrirConta() {
         this.ativa = true;
     }
 

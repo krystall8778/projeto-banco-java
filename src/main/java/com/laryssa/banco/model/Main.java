@@ -8,11 +8,6 @@ public class Main {
 
         System.out.println("=== SIMULAÇÃO BANCÁRIA ===");
 
-
-        BigDecimal limiteEspecial = new BigDecimal("1000.00");
-        BigDecimal taxaMensal = new BigDecimal("25.00");
-        BigDecimal taxaRendimento = new BigDecimal("5.00");
-
         ContaCorrente contaCorrente = criarContaCorrente();
         ContaPoupanca contaPoupanca = criarContaPoupanca();
 
@@ -23,39 +18,41 @@ public class Main {
     }
 
     private static ContaCorrente criarContaCorrente() {
-        ContaCorrente conta = new ContaCorrente(
-                "001",
-                "Laryssa",
-                new BigDecimal("1000.00"),
-                new BigDecimal("25.00")
+        BigDecimal limiteEspecial = new BigDecimal("1000.00");
+        BigDecimal taxaMensal = new BigDecimal("25.00");
+
+        ContaCorrente contaCorrente = new ContaCorrente(
+                "laryssa",
+                limiteEspecial,
+                taxaMensal
         );
-        conta.abrirConta();
-        return conta;
+
+        return contaCorrente;
     }
 
     private static ContaPoupanca criarContaPoupanca() {
-        ContaPoupanca conta = new ContaPoupanca(
-                "002",
+        BigDecimal taxaRendimento = new BigDecimal("5.00");
+
+        ContaPoupanca contaPoupanca = new ContaPoupanca(
                 "Tifanny",
-                new BigDecimal("5.00")
+                taxaRendimento
         );
-        conta.abrirConta();
-        return conta;
+        return contaPoupanca;
     }
 
-    private static void realizarOperacoesContaCorrente(ContaCorrente conta) {
-        conta.depositar(new BigDecimal("500"));
-        conta.sacar(new BigDecimal("200"));
+    private static void realizarOperacoesContaCorrente(ContaCorrente contaCorrente) {
+        contaCorrente.depositar(new BigDecimal("500"));
+        contaCorrente.sacar(new BigDecimal("200"));
     }
 
-    private static void realizarOperacoesContaPoupanca(ContaPoupanca conta) {
-        conta.depositar(new BigDecimal("1000"));
-        conta.aplicarRendimento();
+    private static void realizarOperacoesContaPoupanca(ContaPoupanca contaPoupanca) {
+        contaPoupanca.depositar(new BigDecimal("1000"));
+        contaPoupanca.aplicarRendimento();
     }
 
-    private static void exibirResultados(ContaCorrente cc, ContaPoupanca cp) {
+    private static void exibirResultados(ContaCorrente contaCorrente, ContaPoupanca contaPoupanca) {
         System.out.println("\n=== RESULTADOS ===");
-        System.out.println("Saldo Conta Corrente: " + cc.getSaldo());
-        System.out.println("Saldo Conta Poupança: " + cp.getSaldo());
+        System.out.println("Saldo Conta Corrente: " + contaCorrente.getSaldo());
+        System.out.println("Saldo Conta Poupança: " + contaPoupanca.getSaldo());
     }
 }

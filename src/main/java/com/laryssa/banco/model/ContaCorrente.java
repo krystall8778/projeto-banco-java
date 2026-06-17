@@ -7,11 +7,12 @@ import java.math.BigDecimal;
 
 public class ContaCorrente extends Conta implements CobrancaMensal {
 
-    private BigDecimal taxaMensal;
     private BigDecimal limiteEspecial;
+    private BigDecimal taxaMensal;
 
-    public ContaCorrente(String numeroConta, String dono, BigDecimal limiteEspecial, BigDecimal taxaMensal){
-        super(numeroConta, dono);
+
+    public ContaCorrente(String dono, BigDecimal limiteEspecial, BigDecimal taxaMensal){
+        super(dono);
 
         if (limiteEspecial.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Limite Especial não pode ser negativo.");

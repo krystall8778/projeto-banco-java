@@ -13,9 +13,7 @@ public class ContaPoupancaTest {
 
     @BeforeEach
     public void setUp() {
-        conta = new ContaPoupanca("123", "Tifanny", BigDecimal.valueOf(5));
-        conta.abrirConta();
-
+        conta = new ContaPoupanca("Tifanny", BigDecimal.valueOf(5));
         conta.depositar(BigDecimal.valueOf(1000));
 
     }

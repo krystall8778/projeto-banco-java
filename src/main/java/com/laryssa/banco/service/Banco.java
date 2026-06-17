@@ -82,6 +82,16 @@ public class Banco {
 
     }
 
+    public void adicionarConta(Cliente cliente, Conta conta){
+        if(cliente == null || conta == null) {
+            throw new IllegalArgumentException("credenciais invalidas");
+        }
+        if(cliente.getId() == null) {
+            throw new IllegalArgumentException("cliente precisa estar cadastrado");
+        }
+        cliente.getContas().add(conta);
+    }
+
 
     public Cliente autenticarCliente (String cpf, String senha){
         validarEntrada(cpf, senha);

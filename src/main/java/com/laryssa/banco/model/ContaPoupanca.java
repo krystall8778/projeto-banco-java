@@ -10,8 +10,8 @@ public class ContaPoupanca extends Conta implements AplicarRendimento {
     private BigDecimal taxaRendimento;
 
 
-    public ContaPoupanca(String numeroConta, String dono, BigDecimal taxaRendimento){
-        super(numeroConta, dono);
+    public ContaPoupanca(String dono, BigDecimal taxaRendimento){
+        super(dono);
 
         if (taxaRendimento.compareTo(BigDecimal.ZERO) < 0) {
             throw new IllegalArgumentException("Taxa de rendimento não deve ser negativa!");
